@@ -2,7 +2,7 @@ import axios from 'axios';
 import { IProfileBody, IUserBody } from '../models/userModels';
 import { toast } from 'react-toastify';
 
-const BASE_URL = 'http://localhost:4000/api';
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export interface IProfile {
     _id: string
