@@ -4,6 +4,7 @@ import UserList from './pages/UserList/UserList';
 import Navbar from './components/Navbar';
 import './App.css'
 import UserCreate from './pages/UserCreate/UserCreate';
+import ProfileCreate from './pages/ProfileCreate/ProfileCreate';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<UserList />} />
         <Route path="/users/:id" element={<UserDetail />} />
         <Route path="/users/new" element={<UserCreate />} />
+        <Route path="/profile/new" element={<ProfileCreate />} />
       </Routes>
     </Router>
   );

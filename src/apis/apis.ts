@@ -1,14 +1,27 @@
 import axios from 'axios';
-import { IUserBody } from '../models/userModels';
+import { IProfileBody, IUserBody } from '../models/userModels';
 import { toast } from 'react-toastify';
 
 const BASE_URL = 'http://localhost:4000/api';
+
+export interface IProfile {
+    _id: string
+    name: string
+    code: string
+}
+
+interface ProfileSchema {
+    response: IProfile[]
+    status: string
+}
+
 
 export interface IUser {
     _id: string
     name: string
     email: string
     age: string
+    profileId: string
 }
 
 interface UsersSchema {
@@ -43,6 +56,28 @@ export const fetchUsers = async (search: string) => {
         return data.response ?? [];
     } catch (error) {
         console.error('Error fetching users:', error);
+        throw error;
+    }
+};
+
+export const fetchProfiles = async () => {
+    try {
+        const {data} = await axios.get<ProfileSchema>(`${BASE_URL}/profiles`);
+        return data.response ?? [];
+    } catch (error) {
+        console.error('Error fetching profiles:', error);
+        throw error;
+    }
+};
+
+export const createProfile = async (body: IProfileBody) => {
+    try {
+        const response = await axios.post(`${BASE_URL}/profiles`, body);
+        toast.success('Perfil creado con éxito')
+        return response.data;
+    } catch (error:any) {
+        toast.error(error?.response.data.message)
+        console.error(`Error creating profile: `, error);
         throw error;
     }
 };

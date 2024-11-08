@@ -5,6 +5,11 @@
     width: 100%;
 }
 
+.user-list-header{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
 .input-search{
     width: 300px;
     padding: 10px;
@@ -13,13 +18,20 @@
     text-align: center;
 }
 
-.button-create{
+.button{
     padding: 10px;
     margin-left: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.create-user{
     background-color: #4CAF50;
+}
+
+.create-profile{
+    background-color: #81d784;
 }
 
 .user-list-container{
@@ -28,4 +40,10 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .input-search {
+        width: 150px;
+    }
 }

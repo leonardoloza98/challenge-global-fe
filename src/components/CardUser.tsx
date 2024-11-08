@@ -1,5 +1,5 @@
 import { IUser } from "../apis/apis";
-import './CardUser.css'; // Asegúrate de que la ruta es correcta
+import './CardUser.css';
 
 interface ICardProps {
     user?: IUser;

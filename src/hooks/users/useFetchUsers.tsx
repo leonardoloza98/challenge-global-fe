@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchUsers, IUser } from "../apis/apis";
+import { fetchUsers, IUser } from "../../apis/apis";
 
 const useFetchUsers = (search: string) => {
     const [users, setUsers] = useState<IUser[]>([]);

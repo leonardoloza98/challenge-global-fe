@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { updateUserById, IUser } from '../apis/apis';
+import { updateUserById, IUser } from '../../apis/apis';
 
 const useUpdateUser = () => {
     const [loading, setLoading] = useState(false);

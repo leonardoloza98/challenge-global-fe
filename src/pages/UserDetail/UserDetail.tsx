@@ -1,17 +1,18 @@
 import { useNavigate, useParams } from "react-router-dom"
-import useFetchUserById from "../../hooks/useFetchUser"
 import Loading from "../../components/Loading"
 import './UserDetail.css'
 import CardUserEdit from "../../components/CardUserEdit"
 import { useEffect, useState } from "react"
 import { deleteUserById, IUser } from "../../apis/apis"
-import useUpdateUser from "../../hooks/useUpdateUser"
+import useFetchUserById from "../../hooks/users/useFetchUser"
+import useUpdateUser from "../../hooks/users/useUpdateUser"
 
 const INITIAL_STATE = {
     _id: '',
     name: '', 
     email: '', 
-    age: ''
+    age: '',
+    profileId: ''
 }
 
 const UserDetail = ()=>{
@@ -55,6 +56,7 @@ const UserDetail = ()=>{
                 name: user.name, 
                 email: user.email, 
                 age: user.age,
+                profileId: user.profileId
             });
         }
     }, [user]);

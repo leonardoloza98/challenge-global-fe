@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { createUser } from '../apis/apis';
-import { IUserBody } from '../models/userModels';
+import { createUser } from '../../apis/apis';
+import { IUserBody } from '../../models/userModels';
 
 const useCreateUser = () => {
     const [loading, setLoading] = useState(false);
