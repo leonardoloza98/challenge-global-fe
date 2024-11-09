@@ -1,5 +1,5 @@
-import { IProfileBody } from "../models/userModels";
-import './CardUserEdit.css';
+import { IProfileBody } from "../../models/userModels";
+import './CardProfileCreate.css';
 
 interface ICardProps {
     profile?: IProfileBody;
@@ -8,7 +8,7 @@ interface ICardProps {
 
 const CardProfileCreate = ({ profile, onChange }: ICardProps) => {
     return (
-        <div className="card-user-container">
+        <div className="card-profile-container-edit">
             <h2 className="card-title">Perfil</h2>
             <div className="card-info">
                 <div className="card-item">
@@ -19,7 +19,6 @@ const CardProfileCreate = ({ profile, onChange }: ICardProps) => {
                         placeholder={profile?.name || ''}
                         onChange={(e) => onChange('name', e.target.value)}
                         className="card-input"
-                        style={{width: '90%'}}
                     />
                 </div>
                 <div className="card-item">
@@ -30,7 +29,6 @@ const CardProfileCreate = ({ profile, onChange }: ICardProps) => {
                         placeholder={profile?.code || ''}
                         onChange={(e) => onChange('code', e.target.value)}
                         className="card-input"
-                        style={{width: '90%'}}
                     />
                 </div>
             </div>

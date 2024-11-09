@@ -8,6 +8,7 @@
 .user-list-header{
     display: flex;
     flex-wrap: nowrap;
+    margin-bottom: 10px;
 }
 
 .input-search{
@@ -27,10 +28,16 @@
 }
 
 .create-user{
-    background-color: #4CAF50;
+    background-color: #82df96;
+}
+.create-user:hover {
+    background-color: #5ac57e;
 }
 
 .create-profile{
+    background-color: #4CAF50;
+}
+.create-profile:hover {
     background-color: #388E3C;
 }
 
@@ -40,6 +47,8 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    height: 65vh;
+    overflow: auto;
 }
 
 @media (max-width: 768px) {

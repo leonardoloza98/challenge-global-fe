@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import useCreateProfile from "../../hooks/profile/useCreateProfile"
 import { IProfileBody } from "../../models/userModels"
-import CardProfileCreate from "../../components/CardProfileCreate"
+import CardProfileCreate from "../../components/CardProfileCreate/CardProfileCreate"
 
 const INITIAL_STATE = {
     name: '',

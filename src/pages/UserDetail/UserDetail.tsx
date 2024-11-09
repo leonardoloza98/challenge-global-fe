@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom"
-import Loading from "../../components/Loading"
+import Loading from "../../components/Loading/Loading"
 import './UserDetail.css'
-import CardUserEdit from "../../components/CardUserEdit"
+import CardUserEdit from "../../components/CardUserEdit/CardUserEdit"
 import { useEffect, useState } from "react"
 import { deleteUserById, IUser } from "../../apis/apis"
 import useFetchUserById from "../../hooks/users/useFetchUser"

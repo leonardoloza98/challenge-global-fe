@@ -1,4 +1,4 @@
-import { IUser } from "../apis/apis";
+import { IUser } from "../../apis/apis";
 import './CardUser.css';
 
 interface ICardProps {

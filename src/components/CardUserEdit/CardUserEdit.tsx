@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import useFetchProfiles from "../hooks/profile/useFetchProfiles";
-import { IUserBody } from "../models/userModels";
-import './CardUserEdit.css'; // Asegúrate de que la ruta es correcta
+import useFetchProfiles from "../../hooks/profile/useFetchProfiles";
+import { IUserBody } from "../../models/userModels";
+import './CardUserEdit.css';
 
 interface ICardProps {
     user?: IUserBody;
@@ -18,7 +18,7 @@ const CardUserEdit = ({ user, onChange }: ICardProps) => {
     const {profiles} = useFetchProfiles()
 
     return (
-        <div className="card-user-container">
+        <div className="card-user-container-edit">
             <h2 className="card-title">Detalle de Usuario</h2>
             <div className="card-info">
                 <div className="card-item">

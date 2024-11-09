@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom"
-import CardUserEdit from "../../components/CardUserEdit"
+import CardUserEdit from "../../components/CardUserEdit/CardUserEdit"
 import { useState } from "react"
 import { IUserBody } from "../../models/userModels"
 import useCreateUser from "../../hooks/users/useCreateUser"
+import './UserCreate.css'
 
 const INITIAL_STATE = {
     name: undefined, 

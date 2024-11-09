@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import './UserList.css'
-import Loading from "../../components/Loading"
-import CardUser from "../../components/CardUser"
+import Loading from "../../components/Loading/Loading"
+import CardUser from "../../components/CardUser/CardUser"
 import { useState } from "react"
 import useFetchUsers from "../../hooks/users/useFetchUsers"
 
