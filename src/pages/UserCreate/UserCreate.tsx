@@ -24,7 +24,11 @@ const UserCreate = ()=>{
         }
         setUserState(newState)
     }
-    const disabledButtonAccept = !userState.name || !userState.email || !userState.age
+
+    const isDisabledButtonAccept = () => {
+        return !userState.name || !userState.email || !userState.age || !userState.profileId
+    }
+
     const handleCancel = () => {
         navigate('/')
     }
@@ -44,7 +48,7 @@ const UserCreate = ()=>{
             <CardUserEdit user={userState} onChange={handleOnChange}/>
             <div>
                 <button className='user-detail-button cancel' onClick={handleCancel} disabled={disabled}>Cancelar</button>
-                <button className='user-detail-button accept' onClick={handleAccept} disabled={disabled || disabledButtonAccept}>Guardar</button>
+                <button className='user-detail-button accept' onClick={handleAccept} disabled={disabled || isDisabledButtonAccept()}>Crear</button>
             </div>
         </div>
     )

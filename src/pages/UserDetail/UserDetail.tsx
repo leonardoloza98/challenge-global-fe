@@ -69,7 +69,7 @@ const UserDetail = ()=>{
             <div>
                 <button className='user-detail-button delete' onClick={handleDelete} disabled={disabled}>Borrar</button>
                 <button className='user-detail-button cancel' onClick={handleCancel} disabled={disabled}>Cancelar</button>
-                <button className='user-detail-button accept' onClick={handleAccept} disabled={disabled}>Aceptar</button>
+                <button className='user-detail-button accept' onClick={handleAccept} disabled={disabled}>Guardar</button>
             </div>
         </div>
     )
